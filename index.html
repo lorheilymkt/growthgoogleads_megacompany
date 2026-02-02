@@ -22,14 +22,14 @@
             border: 1px solid rgba(226, 232, 240, 0.8);
         }
 
-        /* Neon LED Effect */
+        /* Efecto Neon LED */
         @keyframes neon-pulse {
             0%, 100% { box-shadow: 0 0 5px rgba(37, 99, 235, 0.2); border-color: rgba(37, 99, 235, 0.3); }
             50% { box-shadow: 0 0 15px rgba(37, 99, 235, 0.5); border-color: rgba(37, 99, 235, 0.7); }
         }
         .neon-led { animation: neon-pulse 3s infinite ease-in-out; border-width: 2px; }
 
-        /* Neon Green Impact Badge */
+        /* Badge de impacto neon verde */
         @keyframes impact-glow {
             0%, 100% { box-shadow: 0 0 8px rgba(57, 255, 20, 0.3); transform: scale(1); }
             50% { box-shadow: 0 0 20px rgba(57, 255, 20, 0.6); transform: scale(1.03); }
@@ -41,7 +41,7 @@
             text-shadow: 0 0 10px #39FF14;
         }
 
-        /* Bar Animations */
+        /* Animaciones de barras */
         @keyframes fade-in-up {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
@@ -67,7 +67,7 @@
             position: relative;
         }
 
-        /* Trend Line Animation */
+        /* Animación de línea de tendencia */
         .trend-path {
             stroke-dasharray: 1200;
             stroke-dashoffset: 1200;
@@ -86,13 +86,13 @@
         }
         .animate-arrow { animation: arrow-slide 2s infinite ease-in-out; }
 
-        /* Trend Slat Visualization */
+        /* Visualización de slats de tendencia */
         .slat-container { display: flex; gap: 4px; align-items: flex-end; height: 32px; }
         .slat { width: 6px; border-radius: 2px; transition: all 0.5s ease-in-out; }
         .slat-off { background-color: #f1f5f9; height: 12px; }
         .slat-on { background-color: #2563eb; box-shadow: 0 0 8px rgba(37, 99, 235, 0.3); }
 
-        /* Updated Brand Tabs for Dark Header */
+        /* Pestañas de marca actualizadas para el encabezado oscuro */
         .brand-tab { color: #94a3b8; transition: all 0.3s; }
         .brand-tab:hover { color: #f8fafc; }
         .brand-tab.active { color: #3b82f6; font-weight: 800; border-bottom: 3px solid #3b82f6; }
@@ -102,19 +102,19 @@
 </head>
 <body class="text-slate-800 antialiased overflow-x-hidden">
 
-    <!-- Header: Dark Background Implementation -->
+    <!-- Encabezado: Implementación de fondo oscuro -->
     <header class="bg-slate-950/95 backdrop-blur-md border-b border-slate-800 sticky top-0 z-50">
         <div class="max-w-[1500px] mx-auto px-6 flex justify-between items-center h-20">
             <div class="flex items-center space-x-6">
-                <!-- LOGO LORE: Expected file "logo-lore.png" -->
-                <div id="container-logo-lore" class="h-12 flex items-center justify-center p-1 bg-white/5 rounded-xl border border-white/10">
+                <!-- LOGO LORE: Ajustado a h-14 (~20% más grande que h-12) -->
+                <div id="container-logo-lore" class="h-14 flex items-center justify-center p-1 bg-white/5 rounded-xl border border-white/10">
                     <img src="logo-lore.png" alt="Lore Logo" class="h-full object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <span class="hidden bg-blue-600 text-white px-3 py-1 rounded text-[9px] font-black uppercase tracking-tighter">Lore</span>
                 </div>
                 <div class="h-8 w-[1px] bg-slate-800"></div>
-                <div class="flex items-center space-x-3">
-                    <!-- BRAND LOGO ICON: Dynamic source based on selected brand -->
-                    <div id="brand-icon-container" class="h-10 w-10 rounded-xl overflow-hidden flex items-center justify-center bg-blue-600 shadow-xl border border-white/10">
+                <div class="flex items-center space-x-4">
+                    <!-- BRAND LOGO ICON: Ajustado a h-12 w-12 (~20% más grande que h-10) -->
+                    <div id="brand-icon-container" class="h-12 w-12 rounded-xl overflow-hidden flex items-center justify-center bg-blue-600 shadow-xl border border-white/10">
                         <img id="brand-logo-img" src="logo-megafence.png" alt="Brand Logo" class="w-full h-full object-cover p-1" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2224%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect width=%2218%22 height=%2218%22 x=%223%22 y=%223%22 rx=%222%22/%3E%3Cpath d=%22M15 8h.01%22/%3E%3Cpath d=%22m7 21 5-5 5 5%22/%3E%3Cpath d=%22m7 21 5-5 5 5%22/%3E%3C/svg%3E'">
                     </div>
                     <span id="current-brand-logo" class="text-sm font-black text-white uppercase tracking-tight">Megafence</span>
@@ -127,7 +127,7 @@
                 <button onclick="switchBrand('megadoor')" id="btn-megadoor" class="brand-tab py-2 text-[11px] font-black tracking-widest uppercase">MEGADOOR</button>
             </nav>
 
-            <!-- Language Switcher Adjusted for Dark Mode -->
+            <!-- Selector de idioma ajustado para modo oscuro -->
             <div class="flex bg-slate-900 p-1.5 rounded-xl border border-slate-800">
                 <button onclick="setLanguage('es')" id="lang-es" class="flex items-center space-x-1.5 px-3 py-1.5 text-[10px] font-black rounded-lg bg-blue-600 shadow-lg text-white transition-all">
                     <span>🇪🇸</span><span>ES</span>
@@ -141,9 +141,9 @@
 
     <main class="max-w-[1500px] mx-auto px-6 py-6 space-y-8 pb-20">
         
-        <!-- View: MEGAFENCE CONTENT -->
+        <!-- Vista: CONTENIDO MEGAFENCE -->
         <div id="view-megafence" class="space-y-8">
-            <!-- Hero Summary -->
+            <!-- Resumen Hero -->
             <div class="flex items-center justify-between">
                 <div class="space-y-1">
                     <div class="flex items-center space-x-2">
@@ -166,7 +166,7 @@
                 </div>
             </div>
 
-            <!-- KPI Cards Grid -->
+            <!-- Cuadrícula de tarjetas de KPI -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Llamadas -->
                 <div class="premium-card rounded-[2.5rem] p-6 flex flex-col space-y-5 border-t-4 border-t-blue-600 shadow-xl shadow-slate-200/40">
@@ -244,7 +244,7 @@
                 </div>
             </div>
 
-            <!-- LEADS EVOLUTION GRAPH -->
+            <!-- GRÁFICO DE EVOLUCIÓN DE LEADS -->
             <div class="premium-card rounded-[3rem] p-8 space-y-10 overflow-hidden relative">
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 relative z-10">
                     <div>
@@ -329,7 +329,7 @@
                     </div>
                 </div>
 
-                <!-- Table Evolution -->
+                <!-- Evolución de Performance -->
                 <div class="premium-card rounded-[3rem] p-10 overflow-hidden">
                     <div class="mb-10">
                         <h3 class="text-xl font-black text-slate-900" data-key="table_title">Evolución de Performance: Octubre - Enero</h3>
@@ -410,7 +410,7 @@
             </div>
         </div>
 
-        <!-- PLACEHOLDER FOR OTHER BRANDS -->
+        <!-- ESPACIO RESERVADO PARA OTRAS MARCAS -->
         <div id="view-empty" class="hidden py-40 text-center">
             <div class="max-w-md mx-auto space-y-6">
                 <div class="h-20 w-20 bg-white rounded-[2rem] shadow-xl flex items-center justify-center mx-auto text-slate-200">
@@ -545,15 +545,15 @@
                 emptyView.classList.add('hidden');
                 logoLabel.innerText = 'Megafence';
                 brandLogoImg.src = 'logo-megafence.png';
-                iconContainer.className = "h-10 w-10 rounded-xl overflow-hidden flex items-center justify-center bg-blue-600 shadow-xl border border-white/10";
+                iconContainer.className = "h-12 w-12 rounded-xl overflow-hidden flex items-center justify-center bg-blue-600 shadow-xl border border-white/10";
             } else {
                 megaView.classList.add('hidden');
                 emptyView.classList.remove('hidden');
                 logoLabel.innerText = brand.toUpperCase();
                 brandLogoImg.src = `logo-${brand.toLowerCase()}.png`;
-                iconContainer.className = "h-10 w-10 rounded-xl overflow-hidden flex items-center justify-center bg-slate-800 shadow-xl border border-white/10";
+                iconContainer.className = "h-12 w-12 rounded-xl overflow-hidden flex items-center justify-center bg-slate-800 shadow-xl border border-white/10";
             }
         }
     </script>
 </body>
-</html>
+</html> eof
